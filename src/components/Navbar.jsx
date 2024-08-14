@@ -21,11 +21,11 @@ const Navbar = () => {
               </svg>
             </button>
             <ul className={`lg:flex lg:items-center lg:space-x-6 ${isMenuOpen ? 'block' : 'hidden'} lg:block`}>
-              <li><Link to="/" className="hover:text-slate-gray hover:bg-deep-navy py-1 px-4">Home</Link></li>
-              <li><Link to="/about" className="hover:text-slate-gray hover:bg-deep-navy py-1 px-4">About</Link></li>
-              <li><Link to="/profile" className="hover:text-slate-gray hover:bg-deep-navy py-1 px-4">Profile</Link></li>
-              <li><Link to="/contact" className="hover:text-slate-gray hover:bg-deep-navy py-1 px-4">Contact</Link></li>
-              <li><Link to="/hire" className="hover:text-slate-gray hover:bg-deep-navy py-1 px-4">Hire</Link></li>
+              <li><Link to="/" className="hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded">Home</Link></li>
+              <li><Link to="/about" className="hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded">About</Link></li>
+              <li><Link to="/profile" className="hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded">Profile</Link></li>
+              <li><Link to="/contact" className="hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded">Contact</Link></li>
+              <li><Link to="/hire" className="hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded">Hire</Link></li>
             </ul>
           </div>
           <div className={`lg:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-deep-navy`}>
