@@ -14,6 +14,8 @@ export default {
         'midnight-blue': '#0E1623',
         'slate-gray': '#6ea3b4',
         'steel-gray': '#737B83',
+        't-blue': '#121e2e7b',
+        't-flax': '#EEF8A1'
       },
     },
   },
