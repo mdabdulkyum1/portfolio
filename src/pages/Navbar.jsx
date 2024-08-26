@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className="bg-nav-navy border-b border-gray-600 sticky top-0">
         <nav className="bg-nav-navy p-4 max-w-6xl mx-auto">
           <div className="container mx-auto flex items-center justify-between">
-            <Link to="/" className="text-steel-gray text-2xl font-bold shadow-sm shadow-gray-400">Md Abdul Kyum</Link>
+            <Link to="/" className="text-slate-gray text-2xl font-bold shadow-sm shadow-gray-400">Md Abdul Kyum</Link>
             <button
               onClick={toggleMenu}
               className="text-steel-gray lg:hidden focus:outline-none"
