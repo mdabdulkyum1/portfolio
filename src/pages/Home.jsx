@@ -1,7 +1,7 @@
 import Banner from './../components/Banner';
 import About from './../components/About';
 import Portfolio from '../components/Portfolio';
-import Contact from './../components/Contact';
+import ContactForm from './../components/ContactForm';
 import Footer from './../components/Footer';
 
 
@@ -12,7 +12,7 @@ const Home = () => {
           <Banner />
           <About />
           <Portfolio />
-          <Contact />
+          <ContactForm />
           <Footer />
         </>
     )  
