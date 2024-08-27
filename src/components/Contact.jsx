@@ -1,37 +1,103 @@
+// ContactForm.js
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 
-const Contact = () => {
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
 
-    return (
-        <>
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-3xl font-bold text-navyblue mb-4">Contact Me</h2>
-                <p className="text-lg text-steel-gray mb-4">
-                    You can reach out to me via email or connect with me on social media.
-                </p>
-                <ul className="flex space-x-4 mb-8">
-                    <li>
-                        <a href="mailto:kyummdabdul@gmail.com" className="text-skyblue hover:text-goldenyellow">
-                            Email
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/your-profile" className="text-skyblue hover:text-goldenyellow">
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/your-twitter" className="text-skyblue hover:text-goldenyellow">
-                            Twitter
-                        </a>
-                    </li>
-                </ul>
+  const [status, setStatus] = useState('');
 
-        
-            </section>
-        </>
-    );
-}
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-export default Contact;
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setStatus('Sending...');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('Message sent!');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setStatus('Failed to send message.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setStatus('Failed to send message.');
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+      <div className="mb-4">
+        <label className="block text-slate-gray mb-2" htmlFor="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          className="w-full p-2 border border-gray-300 rounded"
+          required
+        />
+      </div>
+      <div className="mb-4">
+        <label className="block text-slate-gray mb-2" htmlFor="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          className="w-full p-2 border border-gray-300 rounded"
+          required
+        />
+      </div>
+      <div className="mb-4">
+        <label className="block text-slate-gray mb-2" htmlFor="subject">Subject</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          value={formData.subject}
+          onChange={handleChange}
+          className="w-full p-2 border border-gray-300 rounded"
+          required
+        />
+      </div>
+      <div className="mb-4">
+        <label className="block text-slate-gray mb-2" htmlFor="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          className="w-full p-2 border border-gray-300 rounded"
+          required
+        />
+      </div>
+      <button type="submit" className="bg-nav-navy text-white py-2 px-4 rounded">Send</button>
+      {status && <p className="mt-4 text-slate-gray">{status}</p>}
+    </form>
+  );
+};
+
+export default ContactForm;
