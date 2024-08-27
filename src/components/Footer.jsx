@@ -7,7 +7,7 @@
                     {/* Logo or Name */}
                     <div className="mb-4 md:mb-0">
                         <h2 className="text-steel-gray text-2xl font-bold shadow-sm shadow-gray-400">Md Abdul Kyum</h2>
-                        <p className="text-steel-gray">Jr. Front End Developer</p>
+                        <p className="text-steel-gray">Jr. Frontend Developer</p>
                     </div>
 
                     {/* Navigation Links */}

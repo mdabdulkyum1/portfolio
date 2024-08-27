@@ -4,6 +4,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import Contacts from './Contacts';
+import Portfolio from './Portfolio';
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -23,11 +24,10 @@ const Navbar = () => {
               </svg>
             </button>
             <ul className={`lg:flex lg:items-center lg:space-x-6 ${isMenuOpen ? 'block' : 'hidden'} lg:block`}>
-              <li><Link to="/" className="hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded font-bold">Home</Link></li>
-              <li><Link to="/about" className="hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded font-bold">About</Link></li>
-              <li><Link to="/portfolio" className="hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded font-bold">Portfolio</Link></li>
-              <li><Link to="/contact" className="hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded font-bold">Contact Me</Link></li>
-              {/* <li><Link to="/hire" className="hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded font-bold ">Hire</Link></li> */}
+              <li><Link to="/" className=" hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded font-bold">Home</Link></li>
+              <li><Link to="/about" className="text-steel-gray hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded font-bold">About</Link></li>
+              <li><Link to="/portfolio" className="text-steel-gray hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded font-bold">Portfolio</Link></li>
+              <li><Link to="/contact" className="text-steel-gray hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded font-bold">Contact Me</Link></li>
               <li><Link to="/hire" className="bg-gradient-to-r from-slate-500 to-slate-900 text-white py-2 px-6 rounded-md font-bold shadow-sm hover:bg-gradient-to-r hover:from-slate-500 hover:to-slate-900 transition duration-300 tracking-widest">Hire</Link></li>
 
             </ul>
@@ -48,6 +48,7 @@ const Navbar = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contacts />} />
+            <Route path="/portfolio" element={<Portfolio />} />
           </Routes>
         </main>
       </div>
