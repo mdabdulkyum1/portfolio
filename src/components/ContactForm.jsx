@@ -1,4 +1,5 @@
-/* eslint-disable no-unused-vars */
+// src/components/ContactForm.jsx
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 
 const ContactForm = () => {
@@ -20,7 +21,6 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     setStatus('Sending...');
 
     try {
