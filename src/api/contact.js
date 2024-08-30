@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 // src/api/contact.js
 import nodemailer from 'nodemailer';
 
