@@ -23,7 +23,7 @@ const ContactForm = () => {
     setStatus('Sending...');
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://portfolio-test-smoky.vercel.app/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
