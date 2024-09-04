@@ -56,6 +56,18 @@ const Portfolio = () => {
 
   const [activeCategory, setActiveCategory] = useState("All");
 
+  const categories = {
+    All: projects.length,
+    Portfolio: projects.filter((project) => project.category === "Portfolio")
+      .length,
+    "E-commerce": projects.filter(
+      (project) => project.category === "E-commerce"
+    ).length,
+    "Landing Page": projects.filter(
+      (project) => project.category === "Landing Page"
+    ).length,
+  };
+
   const filteredProjects =
     activeCategory === "All"
       ? projects
@@ -64,26 +76,24 @@ const Portfolio = () => {
   return (
     <div className="bg-deep-navy py-12" id="port">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 className="text-4xl font-bold text-slate-gray mb-10 text-center">
-            My Portfolio
-          </h2>
+        <h2 className="text-4xl font-bold text-slate-gray mb-10 text-center">
+          My Portfolio
+        </h2>
         {/* Category Buttons */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 text-center">
-          {["All", "Portfolio", "E-commerce", "Landing Page"].map(
-            (category) => (
-              <button
-                key={category}
-                className={`w-full px-4 py-2 rounded-md transition duration-300 ${
-                  activeCategory === category
-                    ? "bg-slate-gray text-deep-navy font-semibold"
-                    : "bg-midnight-blue text-slate-gray hover:bg-slate-gray hover:text-deep-navy"
-                }`}
-                onClick={() => setActiveCategory(category)}
-              >
-                {category}
-              </button>
-            )
-          )}
+          {Object.keys(categories).map((category) => (
+            <button
+              key={category}
+              className={`w-full px-4 py-2 rounded-md transition duration-300 ${
+                activeCategory === category
+                  ? "bg-slate-gray text-deep-navy font-semibold"
+                  : "bg-midnight-blue text-slate-gray hover:bg-slate-gray hover:text-deep-navy"
+              }`}
+              onClick={() => setActiveCategory(category)}
+            >
+              {`${category} (${categories[category]})`}
+            </button>
+          ))}
         </div>
 
         {/* Projects Grid */}
