@@ -1,19 +1,31 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark"> <!-- Add class="dark" for dark mode by default -->
   <head>
     <meta charset="UTF-8" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Font Awe some -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
-    <!-- my bubble -->
+    <!-- My Custom Bubble Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdabdulkyum1/my-styles-and-scripts@main/index.css">
     <title>Md Abdul Kyum</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <!-- my bubble -->
+    <!-- My Custom Bubble Script -->
     <script src="https://cdn.jsdelivr.net/gh/mdabdulkyum1/my-styles-and-scripts@main/main.js"></script>
+
+    <!-- Optional: JavaScript to Handle Theme Toggling -->
+    <script>
+      // Check for previously saved theme in localStorage
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
   </body>
 </html>
