@@ -1,7 +1,7 @@
 const Banner = () => {
     return(
         <>
-            <div className="flex justify-center items-center py-6 bg-t-blue">
+            <div className="flex justify-center items-center py-6 bg-transparent ">
                 <div className="py-5">
                     <h1 className="text-xl lg:text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-slate-gray to-steel-gray">
                         &lt; Jr. Frontend Developer &gt;
