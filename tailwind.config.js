@@ -9,7 +9,7 @@ export default {
     extend: {
       colors: {
         'nav-navy': '#101D2D',
-        'deep-navy': '#11192400',
+        'deep-navy': '#111924',
         'rich-blue': '#121E2E',
         'midnight-blue': '#0E1623',
         'slate-gray': '#B2FFF3',
