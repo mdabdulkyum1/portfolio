@@ -52,6 +52,13 @@ const Portfolio = () => {
       description:
         "An elegant portfolio project emphasizing creative visuals and responsive layout.",
     },
+    {
+      title: "Real State",
+      category: "E-commerce",
+      url: "https://my-real-estate-two.vercel.app/",
+      description:
+        "An elegant portfolio project emphasizing creative visuals and responsive layout.",
+    },
   ];
 
   const [activeCategory, setActiveCategory] = useState("All");
@@ -84,13 +91,14 @@ const Portfolio = () => {
           {Object.keys(categories).map((category) => (
             <button
               key={category}
-              className={`w-full px-4 py-2 rounded-md transition duration-300 ${
+              className={`w-full px-2 py-2 rounded-full shadow-lg transition-all duration-400 relative overflow-hidden ${
                 activeCategory === category
-                  ? "bg-slate-gray text-deep-navy font-semibold"
-                  : "bg-midnight-blue text-slate-gray hover:bg-slate-gray hover:text-deep-navy"
+                  ? "bg-gradient-to-r from-[#005EFF] to-[#42EADD] text-white border-2 border-cyan-400"
+                  : "bg-gradient-to-r from-[#4876FD] to-[#2Ad7EE] text-white hover:scale-105 hover:shadow-2xl hover:from-[#005EFF] hover:to-[#42EADD]"
               }`}
               onClick={() => setActiveCategory(category)}
             >
+              <span className="absolute inset-0 w-[200%] h-[200%] bg-white opacity-10 rotate-45 transition-all duration-400 transform -top-1/2 -left-1/2"></span>
               {`${category} (${categories[category]})`}
             </button>
           ))}
@@ -114,8 +122,9 @@ const Portfolio = () => {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-3 py-2 text-sm font-semibold text-deep-navy bg-slate-gray rounded-md hover:bg-t-flax hover:text-rich-blue transition-colors duration-300"
+                  className="inline-block px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-[#4876FD] to-[#2Ad7EE] rounded-full shadow-lg transition-all duration-400 relative overflow-hidden hover:scale-105 hover:shadow-2xl hover:from-[#005EFF] hover:to-[#42EADD]"
                 >
+                  <span className="absolute inset-0 w-[200%] h-[200%] bg-white opacity-10 rotate-45 transition-all duration-400 transform -top-1/2 -left-1/2"></span>
                   Preview
                 </a>
               </div>

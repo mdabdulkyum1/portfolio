@@ -22,10 +22,10 @@ body {
 @keyframes clicks {
     0%{
         transform: scale(.1);
-        border: 20px solid #2596a5a1;
+        border: 20px solid #67e2f2ca;
     }
     50%{
-        border: 2px solid #359fa7a1;
+        border: 2px solid #56e3eddf;
 
         transform: scale(2);
     }
@@ -52,10 +52,9 @@ body {
     bottom: -100px;
     border-radius: 50%;
     box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.3); /* Lightened box-shadow */
-    backdrop-filter: blur(1px); /* Slightly less blur for visibility */
+    backdrop-filter: blur(.1px); /* Slightly less blur for visibility */
     cursor: pointer;
     animation: move 10s linear infinite;
-    
 }
 
 @keyframes move {

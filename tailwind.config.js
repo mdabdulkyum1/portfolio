@@ -16,10 +16,14 @@ export default {
         'steel-gray': '#A3B1AF',
         't-blue': '#121e2e7b',
         't-flax': '#EEF8A1',
-        // Light mode colors
-        'bg-light': '#f9fafb', // Background for light mode
-        'text-dark': '#334E58', // Text color for light mode
-        'primary-light': '#2A4D69', // Primary color for light mode
+        // Light mode colors inspired by LinkedIn
+        'bg-light': '#F3F6F8', // Light background similar to LinkedIn's page background
+        'text-dark': '#212121', // Dark text for readability
+        'primary-light': '#0073B1', // LinkedIn's primary blue color
+        'accent-light': '#2867B2', // Accent blue similar to LinkedIn buttons
+        'secondary-light': '#8D6E63', // Muted secondary text or background
+        'border-light': '#E1E9EE', // Border color similar to LinkedIn's light borders
+
       },
     },
   },
