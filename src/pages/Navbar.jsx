@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, NavLink } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Contacts from "./Contacts";
@@ -17,6 +17,49 @@ const Navbar = () => {
     setDarkMode(!darkMode);
     document.documentElement.classList.toggle("dark", !darkMode);
   };
+
+  const links = <>
+                <li>
+                <NavLink
+                  to="/"
+                  className="text-steel-gray hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded font-bold"
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/about"
+                  className="text-steel-gray hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded font-bold"
+                >
+                  About
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/portfolio"
+                  className="text-steel-gray hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded font-bold"
+                >
+                  Portfolio
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/contact"
+                  className="text-steel-gray hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded font-bold"
+                >
+                  Contact Me
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/hire"
+                  className="bg-gradient-to-r from-slate-500 to-slate-900 text-white py-2 px-6 rounded-md font-bold shadow-sm hover:bg-gradient-to-r hover:from-slate-500 hover:to-slate-900 transition duration-300 tracking-widest"
+                >
+                  Hire
+                </NavLink>
+              </li>
+  </>
 
   return (
     <div className={`min-h-screen ${darkMode ? "bg-bg-light" : "bg-deep-navy"}`}>
@@ -62,46 +105,7 @@ const Navbar = () => {
 
             <ul className="hidden lg:flex lg:items-center lg:space-x-6">
               {/* Navigation Links */}
-              <li>
-                <Link
-                  to="/"
-                  className="hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded font-bold"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/about"
-                  className="text-steel-gray hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded font-bold"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/portfolio"
-                  className="text-steel-gray hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded font-bold"
-                >
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  className="text-steel-gray hover:text-slate-gray hover:bg-deep-navy py-1 px-4 rounded font-bold"
-                >
-                  Contact Me
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/hire"
-                  className="bg-gradient-to-r from-slate-500 to-slate-900 text-white py-2 px-6 rounded-md font-bold shadow-sm hover:bg-gradient-to-r hover:from-slate-500 hover:to-slate-900 transition duration-300 tracking-widest"
-                >
-                  Hire
-                </Link>
-              </li>
+                {links}
             </ul>
             
           </div>
