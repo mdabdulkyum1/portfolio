@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import myPhoto from "../assets/myPhoto.jpg"; // Make sure this path is correct
 import { HiLocationMarker } from "react-icons/hi";
+import { Helmet } from "react-helmet-async";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -48,6 +49,10 @@ const ContactForm = () => {
   };
 
   return (
+    <>
+    <Helmet>
+       <title>Md Abdul Kyum | Contact</title>
+    </Helmet>
     <section className="py-12 bg-light-background dark:bg-dark-background" id="contact">
     <div className="text-center mb-8">
       <h1 className="text-3xl lg:text-5xl font-bold text-primary dark:text-dark-text mb-4">
@@ -149,7 +154,8 @@ const ContactForm = () => {
         </div>
       </div>
     </div>
-  </section>
+     </section>
+    </>
   
   
 

@@ -1,6 +1,13 @@
+
+import { Helmet } from 'react-helmet-async';
+
+
 const About = () => {
     return (
       <>
+       <Helmet>
+             <title>Md Abdul Kyum | About</title>
+          </Helmet>
         <div className="bg-light-background dark:bg-dark-background py-6">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Skills Section */}
