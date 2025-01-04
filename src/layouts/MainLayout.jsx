@@ -4,10 +4,10 @@ import Navbar from './../components/Navbar/Navbar';
 
 const MainLayout = () => {
     return (
-        <div className="pt-16">
-            <Navbar></Navbar>
-            <Outlet></Outlet>
-            <Footer></Footer>
+        <div className="pt-16 bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text">
+            <Navbar />
+            <Outlet />
+            <Footer />
         </div>
     );
 };
