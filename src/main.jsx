@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { RouterProvider } from 'react-router-dom'
 import router from './routes/router'
+import BackToTop from './components/Shared/BackToTop/BackToTop'
 
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -10,6 +11,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HelmetProvider>
         <RouterProvider router={router} />
+        <BackToTop></BackToTop>
     </HelmetProvider>
   </StrictMode>,
 )
