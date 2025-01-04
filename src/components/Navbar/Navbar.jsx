@@ -79,7 +79,8 @@ const Navbar = () => {
           <button
             className="btn btn-sm bg-gradient-to-r from-light-accent to-dark-accent dark:from-dark-accent dark:to-light-accent rounded-md border border-light-border dark:border-dark-border shadow-sm text-light-text dark:text-dark-text font-bold"
           >
-            Hire
+            <a href="https://wa.me/+8801754462008" target="_blank">Hire</a>
+
           </button>
         </div>
       </div>
