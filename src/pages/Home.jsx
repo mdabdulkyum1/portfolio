@@ -2,6 +2,7 @@ import Banner from './Banner';
 import About from './About';
 import Portfolio from './Portfolio';
 import ContactForm from './ContactForm';
+import Education from './Education';
 // import { useEffect, useRef } from 'react';
 // import relax from '../assets/audio/relax.mp3'
 
@@ -28,6 +29,7 @@ const Home = () => {
           {/* <audio ref={audioRef} src={relax} /> */}
           <Banner />
           <About />
+          <Education></Education>
           <Portfolio />
           <ContactForm />
         </div>
