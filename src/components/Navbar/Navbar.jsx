@@ -67,7 +67,7 @@ const Navbar = () => {
               to="/"
               className="text-light-accent dark:text-dark-accent text-xl md:text-2xl font-bold shadow-sm shadow-gray-400"
             >
-              Md Abdul Kyum
+              Abdul Kyum
             </Link>
           </div>
         </div>
