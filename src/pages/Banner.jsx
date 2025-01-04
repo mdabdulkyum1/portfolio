@@ -1,6 +1,34 @@
 
 import { FaGithub, FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa';
 import './Banner.css'
+import Swal from 'sweetalert2';
+
+
+const handelDownloadCv = () => {
+  Swal.fire({
+    title: 'Choose an action',
+    text: 'What would you like to do with the CV?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonText: 'Download',
+    cancelButtonText: 'Cancel',
+    showDenyButton: true,
+    denyButtonText: 'View',
+    focusConfirm: false,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.open(
+        'https://docs.google.com/document/d/16nywkcbciu4U-1KTKAWCSxWDyUU7Ljjv_8DGrniKhaE/export?format=pdf',
+        '_blank'
+      );
+    } else if (result.isDenied) {
+      window.open(
+        'https://docs.google.com/document/d/16nywkcbciu4U-1KTKAWCSxWDyUU7Ljjv_8DGrniKhaE',
+        '_blank'
+      );
+    }
+  });
+};
 
 
 const Banner = () => {
@@ -69,14 +97,11 @@ const Banner = () => {
 
 
             <div className="text-center mt-10">
-               <a
-                href="https://docs.google.com/document/d/16nywkcbciu4U-1KTKAWCSxWDyUU7Ljjv_8DGrniKhaE/export?format=pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gradient-to-r from-light-accent to-dark-accent dark:from-dark-accent dark:to-light-accent rounded-md border border-light-border dark:border-dark-border shadow-sm text-light-text dark:text-dark-text font-bold mt-4 px-6 py-3"
+               <button onClick={handelDownloadCv}
+                className="btn bg-gradient-to-r from-light-accent to-dark-accent dark:from-dark-accent dark:to-light-accent rounded-md border border-light-border dark:border-dark-border shadow-sm text-light-text dark:text-dark-text font-bold mt-4 px-6 py-3"
               >
                 Download CV <i className="fa-light fa-arrow-down"></i>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -86,3 +111,6 @@ const Banner = () => {
 };
 
 export default Banner;
+
+
+
