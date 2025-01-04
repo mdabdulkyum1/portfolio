@@ -1,14 +1,12 @@
-// eslint-disable-next-line no-unused-vars
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
-import './index.css';
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import { RouterProvider } from 'react-router-dom'
+import router from './routes/router'
 
-// eslint-disable-next-line react/no-deprecated
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById('root')
-);
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+        <RouterProvider router={router} />
+  </StrictMode>,
+)
