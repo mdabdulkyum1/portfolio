@@ -101,14 +101,8 @@ const About = () => {
                 <strong className="text-slate-gray">
                   Jr. Frontend Developer.
                 </strong>{" "}
-                I am passionate about web development and enjoy creating
-                interactive and user-friendly experiences. With a background in
-                [mention any relevant experience or education], I am skilled in
-                [mention relevant skills like HTML, CSS, JavaScript, React, etc.].
-                I am dedicated to continuous learning and exploring new
-                technologies to enhance my development skills. Outside of coding,
-                I enjoy [mention hobbies or interests]. Connect with me to discuss
-                web projects, tech trends, or anything web-related!
+
+  I am passionate about web development and enjoy creating interactive and user-friendly experiences. With a BSc Degree (Pass Course) in Science and hands-on experience in web development, I am skilled in HTML, CSS, JavaScript, React, WordPress, MongoDB, and more. I am dedicated to continuous learning and exploring new technologies to enhance my development skills. Outside of coding, I enjoy playing football and traveling. Connect with me to discuss web projects, tech trends, or anything web-related!
               </p>
             </section>
           </div>
