@@ -10,6 +10,7 @@ const ThemeToggle = () => {
     // Apply the theme to the `html` element
     document.documentElement.setAttribute("data-theme", theme);
     // Save the selected theme to localStorage
+    
     localStorage.setItem("theme", theme);
   }, [theme]);
 
@@ -17,6 +18,8 @@ const ThemeToggle = () => {
     // Toggle between "light" and "night"
     setTheme((prevTheme) => (prevTheme === "light" ? "night" : "light"));
   };
+
+
 
   return (
     <button

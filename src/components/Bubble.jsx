@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import '../../src/index.css';
 
-const Bubble = ({ darkMode }) => {
-  let bubbleContainer;
 
+const Bubble = () => {
+
+  
+  let bubbleContainer;
   useEffect(() => {
-    if (darkMode) {
+    
       // Create the bubble container and animation in dark mode
       bubbleContainer = document.createElement('div');
       bubbleContainer.classList.add('bubble-container');
@@ -17,9 +19,9 @@ const Bubble = ({ darkMode }) => {
       return () => {
         clearInterval(intervalId); // Stop bubble creation
         bubbleContainer.remove();  // Remove the bubble container
-      };
+    
     }
-  }, [darkMode]);
+  }, []);
 
   function getRandomColor() {
     const colors = [
@@ -46,7 +48,7 @@ const Bubble = ({ darkMode }) => {
 
     setTimeout(() => {
       bubble.remove();
-    }, 10000);
+    }, 1000);
   }
 
   return null;
