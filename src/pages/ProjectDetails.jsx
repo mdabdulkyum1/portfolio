@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const ProjectDetails = () => {
@@ -8,6 +9,9 @@ const ProjectDetails = () => {
   if (!project) {
     return <div className="text-center text-primary">Project not found.</div>;
   }
+  useEffect(()=> {
+        window.scrollTo(0,0);
+  },[])
 
   return (
     <div
