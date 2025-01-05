@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import myPhoto from "../assets/myPhoto.jpg"; // Make sure this path is correct
 import { HiLocationMarker } from "react-icons/hi";
 import { Helmet } from "react-helmet-async";
@@ -47,6 +47,9 @@ const ContactForm = () => {
       setStatus("Failed to send message.");
     }
   };
+  useEffect(()=> {
+        window.scrollTo(0,0);
+  },[])
 
   return (
     <>

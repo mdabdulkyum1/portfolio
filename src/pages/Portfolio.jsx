@@ -23,6 +23,11 @@ const Portfolio = () => {
 
     fetchProjects();
   }, []);
+  
+  useEffect(()=> {
+    window.scrollTo(0,0);
+},[])
+
 
   const categories = {
     All: projects.length,

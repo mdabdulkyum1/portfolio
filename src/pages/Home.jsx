@@ -4,6 +4,7 @@ import About from "./About";
 import Portfolio from "./Portfolio";
 import ContactForm from "./ContactForm";
 import Education from "./Education";
+import { useEffect } from "react";
 // import { useEffect, useRef } from 'react';
 // import relax from '../assets/audio/relax.mp3'
 
@@ -22,6 +23,13 @@ const Home = () => {
   //     window.removeEventListener('scroll', handelScroll);
   //   }
   // },[])
+
+  
+  useEffect(()=> {
+        window.scrollTo(0,0);
+  },[])
+
+
 
   return (
     <>
