@@ -4,6 +4,7 @@ import MainLayout from './../layouts/MainLayout';
 import About from "../pages/About";
 import Portfolio from "../pages/Portfolio";
 import ContactForm from "../pages/ContactForm";
+import ProjectDetails from "../pages/ProjectDetails";
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
             {
                 path: "contact",
                 element: <ContactForm></ContactForm>
+            }, 
+            {
+                path: 'details/:id',
+                element: <ProjectDetails></ProjectDetails>,
+                loader: ()=> fetch("/portfolio.json")
             }
          
         ]
