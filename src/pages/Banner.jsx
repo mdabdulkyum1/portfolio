@@ -63,7 +63,7 @@ const Banner = () => {
 
               {/* LinkedIn */}
               <a
-                href="https://www.linkedin.com/in/md-abdul-kyum-6ba2ba328/"
+                href="https://www.linkedin.com/in/md-abdul-kyum"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-light-text dark:text-dark-text text-3xl relative"
