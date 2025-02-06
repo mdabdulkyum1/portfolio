@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import useScrollDirection from "../../hooks/ScrollDirection/useScrollDirection";
 import ThemeToggle from "../Shared/ThemeToggle/ThemeToggle";
+import logo from '../../assets/logo.png'
 
 const Navbar = () => {
   const isVisible = useScrollDirection();
@@ -65,9 +66,9 @@ const Navbar = () => {
           <div>
             <Link
               to="/"
-              className="text-light-accent dark:text-dark-accent text-xl md:text-2xl font-bold shadow-sm shadow-gray-400"
+              className=""
             >
-              Abdul Kyum
+              <img src={logo} className="w-16 h-16" alt="Md Abdul Kyum" />
             </Link>
           </div>
         </div>
