@@ -68,7 +68,7 @@ const Navbar = () => {
               to="/"
               className=""
             >
-              <img src={logo} className="w-16 h-16" alt="Md Abdul Kyum" />
+              <img src={logo} className="w-1/3" alt="Md Abdul Kyum" />
             </Link>
           </div>
         </div>
