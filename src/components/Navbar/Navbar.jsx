@@ -6,30 +6,57 @@ import logo from '../../assets/logo.png'
 const Navbar = () => {
   const isVisible = useScrollDirection();
 
+  // const links = (
+  //   <>
+  //     <li>
+  //       <NavLink to="/" className="text-light-text dark:text-dark-text">
+  //         Home
+  //       </NavLink>
+  //     </li>
+  //     <li>
+  //       <NavLink to="/about" className="text-light-text dark:text-dark-text">
+  //         About
+  //       </NavLink>
+  //     </li>
+  //     <li>
+  //       <NavLink to="/portfolio" className="text-light-text dark:text-dark-text">
+  //         Portfolio
+  //       </NavLink>
+  //     </li>
+  //     <li>
+  //       <NavLink to="/contact" className="text-light-text dark:text-dark-text">
+  //         Contact Me
+  //       </NavLink>
+  //     </li>
+  //   </>
+  // );
+
   const links = (
     <>
-      <li>
-        <NavLink to="/" className="text-light-text dark:text-dark-text">
-          Home
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/about" className="text-light-text dark:text-dark-text">
-          About
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/portfolio" className="text-light-text dark:text-dark-text">
-          Portfolio
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/contact" className="text-light-text dark:text-dark-text">
-          Contact Me
-        </NavLink>
-      </li>
+      {[
+        { to: "/", label: "Home" },
+        { to: "/about", label: "About" },
+        { to: "/portfolio", label: "Projects" },
+        { to: "/contact", label: "Contact Me" },
+      ].map((link, index) => (
+        <li key={index}>
+          <NavLink
+            to={link.to}
+            className={({ isActive }) =>
+              `ml-4 btn btn-sm bg-gradient-to-r from-light-accent to-dark-accent dark:from-dark-accent dark:to-light-accent rounded-md border border-light-border dark:border-dark-border shadow-sm text-white dark:text-dark-text transition ${
+                isActive
+                  ? "scale-105 shadow-md ring-2 ring-light-accent dark:ring-dark-accent"
+                  : "hover:scale-105 hover:shadow-md"
+              }`
+            }
+          >
+            {link.label}
+          </NavLink>
+        </li>
+      ))}
     </>
   );
+  
 
   return (
     <nav
