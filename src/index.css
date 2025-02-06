@@ -64,3 +64,16 @@ body {
         transform: translateY(-120vh) scale(1.2);
     }
 }
+
+
+@layer utilities {
+    @keyframes smoothScroll {
+      0% { object-position: top; }
+      100% { object-position: bottom; }
+    }
+  
+    .animate-scroll-image {
+      animation: smoothScroll 3s ease-in-out forwards;
+    }
+  }
+  

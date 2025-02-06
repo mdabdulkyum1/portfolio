@@ -1,0 +1,44 @@
+[
+    {
+        "id":1,
+        "title": "EduProSphere",
+        "image": "https://i.ibb.co.com/TqWbgGHF/Home.png",
+        "technologies": ["React", "Node.js", "MongoDB", "CSS", "Express"],
+        "liveLink": "https://eduprosphere-fa7b8.web.app/",
+        "githubLink": "https://github.com/mdabdulkyum1/EduProSphere",
+        "description": "EduManage is a robust and user-friendly platform designed to revolutionize the way educational institutions, tutors, and students interact. Leveraging the power of the MERN stack (MongoDB, Express.js, React, and Node.js), EduManage aims to make skill learning and class management more efficient and accessible than ever before.",
+        "date": "2024-06-15",
+        "author": "Abdul Kyum",
+        "category": "Web Development",
+        "update": "Need to update design Part",
+        "FuturePlan": "In future I can try to make is ATS friendly."
+    },
+    {
+        "id":2,
+        "title": "StudyHive",
+        "image": "https://i.ibb.co.com/gb6CbcZr/Fire-Shot-Capture-057-Home-Study-Hive-studyhive-eb8d9-web-app.png",
+        "technologies": ["React", "Node.js", "MongoDB", "CSS", "Express"],
+        "liveLink": "https://studyhive-eb8d9.web.app/",
+        "githubLink": "https://github.com/mdabdulkyum1/study-hive",
+        "description": "The Online Group-Study web application allows users to collaborate with their friends by creating assignments, completing them, and grading others' submissions. This platform encourages group study, where users can track their progress, submit assignments, and provide feedback to their peers.",
+        "date": "2024-06-15",
+        "author": "Abdul Kyum",
+        "category": "Web Development",
+        "update": "Need to update design Part",
+        "FuturePlan": "In future I can try to make is ATS friendly."
+    },
+    {
+        "id":3,
+        "title": "Elevate Funds",
+        "image": "https://i.ibb.co.com/gb6CbcZr/Fire-Shot-Capture-057-Home-Study-Hive-studyhive-eb8d9-web-app.png",
+        "technologies": ["React", "Node.js", "MongoDB", "CSS", "Express"],
+        "liveLink": "https://studyhive-eb8d9.web.app/",
+        "githubLink": "https://github.com/mdabdulkyum1/study-hive",
+        "description": "crowdfunding platform where you can transform your innovative ideas into reality with the support of a vibrant community.",
+        "date": "2024-06-15",
+        "author": "Abdul Kyum",
+        "category": "Web Development",
+        "update": "Need to update design Part",
+        "FuturePlan": "In future I can try to make is ATS friendly."
+    }
+]

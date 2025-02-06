@@ -36,6 +36,7 @@ const Navbar = () => {
       {[
         { to: "/", label: "Home" },
         { to: "/about", label: "About" },
+        { to: "/skills", label: "Skills" },
         { to: "/portfolio", label: "Projects" },
         { to: "/contact", label: "Contact Me" },
       ].map((link, index) => (

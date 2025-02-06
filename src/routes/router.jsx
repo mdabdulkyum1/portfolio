@@ -5,6 +5,8 @@ import About from "../pages/About";
 import Portfolio from "../pages/Portfolio";
 import ContactForm from "../pages/ContactForm";
 import ProjectDetails from "../pages/ProjectDetails";
+import Skills from "../pages/Skills";
+import Details from "../pages/projects/Details";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +22,10 @@ const router = createBrowserRouter([
                 element: <About></About>
             },
             {
+                path: "/skills",
+                element: <Skills></Skills>
+            },
+            {
                 path: "portfolio",
                 element: <Portfolio></Portfolio>
             },
@@ -31,7 +37,11 @@ const router = createBrowserRouter([
                 path: 'details/:id',
                 element: <ProjectDetails></ProjectDetails>,
                 loader: ()=> fetch("/portfolio.json")
-            }
+            },
+            {
+                path:'/projects/:id', 
+                element:<Details></Details>,
+              }
          
         ]
     }

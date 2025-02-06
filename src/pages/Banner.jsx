@@ -32,7 +32,7 @@ const handleDownloadCv = () => {
 const Banner = () => {
   return (
     <>
-      <div className="relative bg-light dark:bg-dark min-h-screen flex flex-col lg:flex-row items-center px-6 lg:px-16 py-10">
+      <div className="relative bg-light dark:bg-dark min-h-screen flex flex-col lg:flex-row items-center px-6 lg:px-16">
         {/* Left Content */}
         <div className="lg:w-1/2 text-center lg:text-left">
           <h2 className="my-3 text-2xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-light-accent to-dark-accent dark:from-dark-accent dark:to-light-accent ">

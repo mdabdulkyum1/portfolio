@@ -5,6 +5,8 @@ import Portfolio from "./Portfolio";
 import ContactForm from "./ContactForm";
 import Education from "./Education";
 import { useEffect } from "react";
+import Skills from "./Skills";
+import ProjectsCard from "./projects/ProjectsCard";
 // import { useEffect, useRef } from 'react';
 // import relax from '../assets/audio/relax.mp3'
 
@@ -37,7 +39,9 @@ const Home = () => {
         {/* <audio ref={audioRef} src={relax} /> */}
         <Banner />
         <About />
+        <Skills />
         <Education></Education>
+        <ProjectsCard />
         <Portfolio />
         <ContactForm />
         <Helmet>
