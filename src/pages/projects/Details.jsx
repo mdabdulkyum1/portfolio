@@ -39,8 +39,8 @@ const Details = () => {
                         }</h3>
                         <h3 className='font-bold'>Links:</h3>
                         <div className='flex gap-4'>
-                        <h3><a className='font-bold text-blue-500' target='_blank' href={currentCard?.githublink}>Github-link</a></h3>
-                        <h3><a className='font-bold text-blue-500'target='_blank' href={currentCard?.livelink}>Live</a></h3>
+                        <h3><a className='font-bold text-blue-500' target='_blank' href={currentCard?.githubLink}>Github-link</a></h3>
+                        <h3><a className='font-bold text-blue-500'target='_blank' href={currentCard?.liveLink}>Live</a></h3>
                         </div>
                     <h3><span className='font-bold'>Improvement: </span>{currentCard.update}</h3>
                 </div>
@@ -58,8 +58,8 @@ const Details = () => {
             </div>
             {/* back btn */}
             <div className='flex justify-center items-center'>
-            <button className="relative flex h-[50px] w-28 items-center justify-center overflow-hidden bg-blue-600 font-medium text-white shadow-2xl transition-all duration-300 before:absolute before:inset-0 before:border-0 before:border-white before:duration-100 before:ease-linear hover:bg-white hover:text-blue-600 hover:shadow-blue-600 hover:before:border-[25px]">
-              <span className="relative z-10"><Link to='/'>Back To Home</Link></span>
+            <button className="btn bg-gradient-to-r from-light-accent to-dark-accent dark:from-dark-accent dark:to-light-accent rounded-md border border-light-border dark:border-dark-border shadow-md text-light-text dark:text-dark-text font-bold px-6 py-3 transition hover:scale-105">
+              <Link to='/'>Back To Home</Link>
             </button>
             </div>
         </div>

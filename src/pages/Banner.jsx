@@ -47,7 +47,7 @@ const Banner = () => {
           </p>
 
           {/* Social Media Links */}
-          <div className="flex gap-3 mt-8 space-x-6 relative">
+          <div className="flex justify-center lg:justify-start gap-3 mt-8 space-x-6 relative">
             {/* Github */}
             <a
               href="https://github.com/mdabdulkyum1"
