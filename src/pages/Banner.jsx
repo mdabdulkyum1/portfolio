@@ -97,19 +97,19 @@ const Banner = () => {
           <div className="mt-8">
             <button
               onClick={handleDownloadCv}
-              className="btn bg-gradient-to-r from-light-accent to-dark-accent dark:from-dark-accent dark:to-light-accent rounded-md border border-light-border dark:border-dark-border shadow-md text-light-text dark:text-dark-text font-bold px-6 py-3 transition hover:scale-105"
+              className="btn bg-gradient-to-r from-light-accent to-dark-accent dark:from-dark-accent dark:to-light-accent rounded-md border border-light-border dark:border-dark-border shadow-md text-white dark:text-dark-text px-6 py-3 transition hover:scale-105"
             >
-              Download CV <i className="fa-light fa-arrow-down ml-2"></i>
+              Download Resume <i className="fa-light fa-arrow-down ml-2"></i>
             </button>
           </div>
         </div>
 
         {/* Right Banner Image */}
-        <div className="lg:w-1/2 flex justify-center lg:justify-end mt-10 lg:mt-0">
+        <div className="lg:w-1/2 flex justify-center mt-10 lg:mt-0">
           <img
             src={bannerImage}
             alt="Banner"
-            className="w-80 lg:w-[500px] object-cover rounded-lg shadow-lg"
+            className="w-80 lg:w-[400px] object-cover rounded-full"
           />
         </div>
       </div>

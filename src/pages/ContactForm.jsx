@@ -126,7 +126,7 @@ const ContactForm = () => {
         </div>
         <button
           type="submit"
-          className="w-full bg-gradient-to-r from-light-accent to-dark-accent dark:from-dark-accent dark:to-light-accent rounded-md border border-light-border dark:border-dark-border shadow-sm text-light-text dark:text-dark-text font-bold py-3 hover:bg-accent dark:hover:bg-accent-dark transition duration-300"
+          className="w-full bg-gradient-to-r from-light-accent to-dark-accent dark:from-dark-accent dark:to-light-accent rounded-md border border-light-border dark:border-dark-border shadow-sm text-white dark:text-dark-text font-bold py-3 hover:bg-accent dark:hover:bg-accent-dark transition duration-300"
         >
           Send
         </button>
